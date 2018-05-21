@@ -16,27 +16,27 @@
         validate: function(attrs, options) {
 
             if(attrs.first_name === "" || attrs.last_name === "") {
-                return "Musisz podać imię i nazwisko klienta.";
+                return "You must provide the correct name and surname.";
             }
     
             if(!attrs.birthdate.match(/^(\d{2}-\d{2}-\d{4})$/)) {
-                return "Musisz podać poprawną datę urodzenia.";
+                return "You must provide the correct birth date.";
             }
     
             if(!attrs.idc_number.match(/^([a-z]{3}\d{6})$/i)) {
-                return "Musisz podać poprawny numer dowodu osobistego.";
+                return "You must provide the correct idc.";
             }
     
             if(attrs.address === "") {
-                return "Musisz podać poprawny adres.";
+                return "You must provide the correct adress.";
             }
     
             if(!attrs.zip_code.match(/^(\d{2}-\d{3})$/)) {
-                return "Musisz podać poprawny kod pocztowy.";
+                return "You must provide a valid zip code.";
             }
     
             if(attrs.city === "") {
-                return "Musisz podać poprawną nazwę miejscowości.";
+                return "You must provide the correct place.";
             }
     
         },
