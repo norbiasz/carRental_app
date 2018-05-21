@@ -1,4 +1,4 @@
-Rental Cars App
+Cars Rental App
 ================
 
 MongoDB, Expressjs, Backbone and NodeJS
