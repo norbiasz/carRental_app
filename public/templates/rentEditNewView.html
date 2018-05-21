@@ -1,0 +1,26 @@
+<% if( this.model.isNew() ) { %>
+<h3 class="app-heading"><i class="fa fa-edit"></i> New rent</h3>
+<% } else { %> 
+<h3 class="app-heading"><i class="fa fa-edit"></i> Edit rent</h3>
+<% } %>   
+
+<div class="app-form">
+    <form action="" id="new-rent">
+        <div class="app-form-field">
+            <label for="ms-car-id">Car model</label>
+            <input type="text" class="medium" id="ms-car-id" placeholder="Choose a car model">
+        </div>
+
+        <div class="app-form-field">
+            <label for="ms-client-id">Client</label>
+            <input type="text" class="medium" id="ms-client-id" placeholder="Choose a client">
+        </div>
+
+        <div class="app-form-submit">
+            <button type="submit" class="btn">Save</button>
+            <% if( !this.model.isNew() ) { %>
+            <button type="button" class="btn special delete">Return</button>
+            <% } %>
+        </div>
+    </form>
+</div>

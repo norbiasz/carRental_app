@@ -1,0 +1,92 @@
+// *--------- HEADER ---------*
+.app-header {
+    padding: 30px 20px;
+    background-color: $generalDimmedBgColor;
+    @include display-flex();
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+}
+
+.app-breadcrumbs {
+    font-size: 0;
+    line-height: 0;
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+
+    @media only screen and (min-width: 900px) { 
+        margin-right: auto;
+        width: auto;
+    }
+}
+
+.app-status {
+    font-size: 0;
+    line-height: 0;
+    text-transform: uppercase;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+
+    @media only screen and (min-width: 900px) {
+        margin-left: auto;
+        width: auto;
+    }
+}
+
+.app-status__item {
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    background-color: $white;
+    border: 1px $generalBorderColor solid;
+    font-family: $fontHeader;
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 40px;
+    white-space: nowrap;
+    margin: 0 5px;
+
+    @media only screen and (min-width: 900px) {
+        width: auto;
+    }
+}
+
+.app-breadcrumbs {
+    .app-status__item {
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+
+        @media only screen and (min-width: 900px) {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+    }
+}
+
+.app-status {
+    .app-status__item {
+        margin-top: 15px;
+        width: 100%;
+        margin-right: 0px;
+        background-color: transparent;
+        border: none;
+
+        @media only screen and (min-width: 900px) {
+            margin-top: 0px;
+            margin-right: 12px;
+            width: auto;
+            background-color: $white;
+            border: 1px $generalBorderColor solid;
+        }
+    }
+}
+
+.app-status__item-ico {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    right: 3px;
+}

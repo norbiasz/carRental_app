@@ -1,0 +1,18 @@
+<div class="app-search">
+    <input type="text" placeholder="<%= placeholder %>">
+</div>
+
+
+<ul class="app-sort">
+    <% if(order == "1") { %>
+    <li class="app-sort__item" data-order="1">Ascending</li>
+    <li class="app-sort__item" data-order="-1">Descending</li>
+    <% } else { %>
+    <li class="app-sort__item" data-order="-1">Descending</li>
+    <li class="app-sort__item" data-order="1">Ascending</li>
+    <% } %>
+</ul>
+
+<span class="app-add btn-rounded active add">
+    <span class="icon-plus"></span>
+</span>

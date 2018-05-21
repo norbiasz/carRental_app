@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Rental Cars</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="icoomon/style.css"></head>
+    <!--(if target dev)><!-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--<!(endif)-->
+    <!--(if target dist)>
+    <link rel="stylesheet" href="css/style.min.css">
+    <!(endif)-->
+</head>
+<body>
+
+<div class="app-wrapper">
+
+    <div class="app-top">
+
+        <div class="app-logo">
+            <a class="app-logo__link" href="/">
+                <img class="app-logo__image" src="images/logo.png" alt="">
+            </a>
+        </div>
+
+        <a class="app-title" href="/">
+            <span class="app-title__text">Rental Cars</span>  
+        </a>   
+
+        <div class="app-nav">
+            <a href="/cars" class="app-nav__item active" pushstate-link data-tabs="video-tabs">
+                <span class="icon-automobile app-nav__ico"></span>
+                Cars
+            </a>
+            <a href="/rents" class="app-nav__item" pushstate-link data-tabs="rental-tabs">
+                <span class="icon-calendar app-nav__ico"></span>
+                Rents
+            </a>
+        </div>
+
+    </div>
+
+    <div class="app-main">
+
+        <div class="app-header">
+
+        </div>
+
+        <div class="app-main__tab active" id="video-tabs">
+            <a class="app-main__tab-item" href="/cars" class="active" pushstate-link>
+                Cars
+            </a>
+            <a class="app-main__tab-item" href="/brands" pushstate-link>
+                Brands
+            </a>
+            <a class="app-main__tab-item" href="/categories" pushstate-link>
+                Categories
+            </a>
+        </div>
+
+        <div class="app-main__tab" id="rental-tabs">
+            <a class="app-main__tab-item" href="/rents" pushstate-link>
+                Rents
+            </a>
+            <a class="app-main__tab-item" href="/clients" pushstate-link>
+                Clients
+            </a>
+        </div>
+
+        <div class="app-content-wrapper">
+            <div class="app-content"></div>
+            <div class="app-content-nav"></div>
+        </div>
+
+    </div>
+
+</div><!-- /.app-wrapper -->
+
+<!--(if target !dist)><!-->
+<script src="js/libs/jquery.js"></script>
+<script src="js/libs/underscore.js"></script>
+<script src="js/libs/backbone.js"></script>
+<script src="js/libs/backbone.stickit.js"></script>
+<script src="js/libs/pushstate-links.js"></script>
+<script src="js/libs/magicsuggest.js"></script>
+<script src="js/libs/BeatPicker.js"></script>
+<script src="js/libs/zebra-dialog.js"></script>
+<script src="js/libs/moment.js"></script>
+<script src="js/libs/moment.pl.js"></script>
+
+<script src="templates/templates.js"></script>
+
+<script src="js/APP.js"></script>
+<script src="js/Views/Navigation.js"></script>
+<script src="js/Views/Pagination.js"></script>
+<script src="js/Views/ListActionsView.js"></script>
+
+<script src="js/Models/CarModel.js"></script>
+<script src="js/Collections/CarsListCollection.js"></script>
+<script src="js/Views/CarListItemView.js"></script>
+<script src="js/Views/CarsListView.js"></script>
+
+<script src="js/Models/BrandModel.js"></script>
+<script src="js/Collections/BrandsListCollection.js"></script>
+<script src="js/Views/BrandListItemView.js"></script>
+<script src="js/Views/BrandsListView.js"></script>
+
+<script src="js/Models/CategoryModel.js"></script>
+<script src="js/Collections/CategoriesListCollection.js"></script>
+<script src="js/Views/CategoryListItemView.js"></script>
+<script src="js/Views/CategoriesListView.js"></script>
+
+<script src="js/Models/ClientModel.js"></script>
+<script src="js/Collections/ClientsListCollection.js"></script>
+<script src="js/Views/ClientListItemView.js"></script>
+<script src="js/Views/ClientsListView.js"></script>
+
+<script src="js/Models/RentModel.js"></script>
+<script src="js/Collections/RentsListCollection.js"></script>
+<script src="js/Views/RentListItemView.js"></script>
+<script src="js/Views/RentsListView.js"></script>
+
+<script src="js/Views/CarEditView.js"></script>
+<script src="js/Views/BrandEditView.js"></script>
+<script src="js/Views/CategoryEditView.js"></script>
+<script src="js/Views/ClientEditView.js"></script>
+<script src="js/Views/RentEditView.js"></script>
+
+<script src="js/Views/CarDetailsView.js"></script>
+<script src="js/Views/BrandDetailsView.js"></script>
+<script src="js/Views/CategoryDetailsView.js"></script>
+<script src="js/Views/ClientDetailsView.js"></script>
+<script src="js/Views/RentDetailsView.js"></script>
+
+<script src="js/Views/CarNewView.js"></script>
+<script src="js/Views/BrandNewView.js"></script>
+<script src="js/Views/CategoryNewView.js"></script>
+<script src="js/Views/ClientNewView.js"></script>
+<script src="js/Views/RentNewView.js"></script>
+
+<script src="js/Views/LatestRentsListItemView.js"></script>
+<script src="js/Views/LatestRentsView.js"></script>
+<script src="js/Views/StatisticsView.js"></script>
+<script src="js/Views/BreadcrumbsView.js"></script>
+
+<script src="js/Routers/Router.js"></script>
+<!--<!(endif)-->
+
+<!--(if target dist)>
+<script src="js/libs.min.js"></script>
+<script src="js/app.min.js"></script>
+<!(endif)-->
+
+<script>
+    APP.init();
+</script>
+
+
+</body>
+</html>

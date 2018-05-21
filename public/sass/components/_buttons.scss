@@ -1,0 +1,48 @@
+// *--------- BUTTONS ---------*
+%button {
+    display: inline-block;
+    height: 60px;
+    padding: 0 60px;
+    border-radius: 5px;
+    border: none;
+    background: $generalSpecialColor;
+    position: relative;
+    cursor: pointer;
+    font: 18px/60px $fontContent;
+    color: $generalSpecialTextColor;
+
+    &.special {
+        background-color: #ff7c7c;
+    }
+}
+
+%button-rounded {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px $generalBorderColor solid;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 34px;
+    text-align: center;
+    color: lighten($generalTextColor, 30%);
+    @extend %transitionAll;
+
+    &:hover,
+    &.active {
+        border-color: $generalSpecialColor;
+        background-color: $generalSpecialColor;
+
+        color: $generalSpecialTextColor;
+    }
+}
+
+// *--------- STYLES ---------*
+.btn {
+    @extend %button;
+}
+
+.btn-rounded {
+    @extend %button-rounded;
+}

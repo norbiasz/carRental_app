@@ -1,0 +1,3 @@
+<% for(var i = 1; i <= anchors; i++) { %>
+    <a href="#" class="<% i == active ? print("active") : "" %>" data-page="<%= i %>"><%= i %></a>
+<% } %>

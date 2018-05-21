@@ -1,0 +1,21 @@
+<% if( this.model.isNew() ) { %>
+<h3 class="app-heading"><i class="fa fa-edit"></i> New brand</h3>
+<% } else { %> 
+<h3 class="app-heading"><i class="fa fa-edit"></i> Edit brand</h3>
+<% } %>  
+
+<div class="app-form">
+    <form action="" id="new-brand">
+        <div class="app-form-field">
+            <label for="brand-name">Brand:</label>
+            <input type="text" id="brand-name">
+        </div>
+
+        <div class="app-form-submit">
+            <button type="submit" class="btn">Save</button>
+            <% if( !this.model.isNew() ) { %>
+            <button type="button" class="btn special delete">Delete</button>
+            <% } %>
+        </div>
+    </form>
+</div>

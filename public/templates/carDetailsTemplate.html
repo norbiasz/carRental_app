@@ -1,0 +1,14 @@
+<h3 class="app-heading"><i class="fa fa-info"></i> Details car</h3>
+    
+<div class="app-item-info">
+    <p class="app-item-info__content"><span class="app-item-info__title">Model:</span> <%= name %></p>
+    <p class="app-item-info__content"><span class="app-item-info__title">Brand:</span> <%= brands %></p>
+    <p class="app-item-info__content"><span class="app-item-info__title">Category:</span> <%= categories %></p>
+    <p class="app-item-info__content"><span class="app-item-info__title">Date production:</span> <%= date %></p>
+    <p class="app-item-info__content"><span class="app-item-info__title">Description:</span> <i class="app-item-info__desc"><%= description %></i></p>
+    <p class="app-item-info__content"><span class="app-item-info__title">Quantity:</span> <%= quantity %></p>
+    <p class="app-item-info__content"><span class="app-item-info__title">Quantity rents:</span> <%= rent_number %></p>
+    <p class="app-item-info__content"><span class="app-item-info__title">Available:</span> <% available ? print("tak") : print("nie") %></p>
+
+    <button type="button" class="btn edit">Edit</button>
+</div>

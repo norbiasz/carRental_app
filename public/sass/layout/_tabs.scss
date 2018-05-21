@@ -1,0 +1,48 @@
+// *--------- TABS ---------*
+.app-main__tab {
+    display: none;
+    border-bottom: 1px $tabsBorderColor solid;
+    background-color: $generalDimmedBgColor;
+    font-size: 0;
+    line-height: 0;
+
+    &.active {
+        display: block;
+    }
+}
+
+.app-main__tab-item {
+    display: inline-block;
+    min-width: 265px;
+    height: 80px;
+    padding: 0 30px;
+    background-color: $tabsBgColor;
+    font-family: $fontHeader;
+    font-size: 22px;
+    line-height: 82px;
+    color: $generalTextColor;
+    width: 100%;
+    text-align: center;
+
+    @media only screen and (min-width: 900px) { 
+        width: auto;
+        border-right: 1px $tabsBorderColor solid;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    &.active {
+        background-color: $generalBgColor;
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $generalBgColor;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+        }
+    }
+}

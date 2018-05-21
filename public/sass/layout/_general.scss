@@ -1,0 +1,27 @@
+// *--------- PLACEHOLDERS ---------*
+%clearfix {
+    @include clearfix;
+}
+
+%transitionColor {
+    @include transition($props: color);
+}
+
+%transitionAll {
+    @include transition;
+}
+
+// *--------- STYLES ---------*
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $generalBgColor;
+}
+
+.app-wrapper {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+}

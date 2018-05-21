@@ -1,0 +1,97 @@
+// *--------- NAV ---------*
+.app-top {
+    width: 100%;
+    height: 100px;
+    background-color: #5BCAE2;
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content(space-between);
+}
+
+.app-logo {
+    display: none;
+
+    @media only screen and (min-width: 900px) {
+        display: block;
+        margin-left: 20px;
+    }
+}
+
+.app-logo__image {
+    max-width: 100%;
+    height: auto;
+}
+
+.app-title {
+    display: contents;
+}
+
+.app-title__text {
+    font-family: $fontHeader;
+    font-size: 30px;
+    color: $black;
+    padding-left: 20px;
+
+    @media only screen and (min-width: 900px) {
+        font-size: 40px;
+        padding-left: 0px;
+    }
+}
+
+.app-nav {
+    @include display-flex();
+    margin-right: 0px;
+
+    @media only screen and (min-width: 900px) {
+        margin-right: 20px;
+    }
+}
+
+.app-nav__item {
+    display: block;
+    padding: 17px 0 17px 0;
+    margin: 0px 15px;
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    color: $black;
+    font-family: $fontHeader;
+    @extend %transitionAll;
+
+    @media only screen and (min-width: 900px) {
+        margin: 0px 20px;
+        font-size: 19px;
+    }
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @extend %transitionAll;
+    }
+
+    &.active,
+    &:hover {
+        color: $navActiveColor;
+
+        &:before {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.app-nav__ico {
+    font-size: 20px;
+
+    @media only screen and (min-width: 900px) {
+        font-size: 22px
+    }
+}

@@ -1,0 +1,92 @@
+// ----------------
+//     MIXINS
+// ----------------
+
+// box-sizing
+@mixin box-sizing($type) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+}
+
+// clearfix
+@mixin clearfix {
+    &:before,
+    &:after {
+        content:" ";
+        display:table;
+    }
+
+    &:after {
+        clear:both;
+    }
+
+    & {
+        *zoom:1;
+    }
+}
+
+// Transitions
+@mixin transition($props: all, $speed: 0.2s, $easing: linear) {
+    -webkit-transition: $props $speed $easing;
+    -moz-transition: $props $speed $easing;
+    -o-transition: $props $speed $easing;
+    -ms-transition: $props $speed $easing;
+    transition: $props $speed $easing;
+}
+
+// ::selection
+@mixin selection($color, $bgcolor, $elem: "") {
+    #{$elem}::-webkit-selection {
+        color: $color;
+        background-color: $bgcolor;
+    }
+
+    #{$elem}::-moz-selection {
+        color: $color;
+        background-color: $bgcolor;
+    }
+
+    #{$elem}::selection {
+        color: $color;
+        background-color: $bgcolor;
+    }
+}
+
+// placeholder
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content};
+    :-moz-placeholder           {@content};
+    ::-moz-placeholder          {@content};
+    :-ms-input-placeholder      {@content};
+}
+
+// noText
+@mixin no-text {
+    font-size: 0;
+    line-height: 0;
+    text-shadow: none;
+    color: transparent;
+}
+
+// vertical-center
+@mixin vertical-center {
+    position: relative;
+    top: 50%;
+
+    @include transform(translateY(-50%));
+}
+
+// transform
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+// scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}

@@ -1,0 +1,17 @@
+// *--------- STYLES ---------*
+body {
+    font-family: $fontContent;
+    font-size: 16px;
+    font-weight: 500;
+    color: $generalTextColor;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.app-heading {
+    padding: 30px;
+    border-bottom: 1px lighten($generalBorderColor, 10%) solid;
+    font-size: 32px;
+}
