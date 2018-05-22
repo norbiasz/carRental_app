@@ -301,7 +301,7 @@ __p += '<h3 class="app-heading"><i class="fa fa-info"></i> Details rent</h3>\r\n
 '</p>\r\n    <p class="app-item-info__content"><span class="app-item-info__title">Klient:</span> ' +
 ((__t = ( client_name )) == null ? '' : __t) +
 '</p>\r\n    <p class="app-item-info__content"><span class="app-item-info__title">Data:</span> ' +
-((__t = ( date )) == null ? '' : __t) +
+((__t = ( APP.Utils.formatDateMoment(date) )) == null ? '' : __t) +
 '</p>\r\n    <button type="button" class="btn edit">Edit</button>\r\n</div>';
 
 }

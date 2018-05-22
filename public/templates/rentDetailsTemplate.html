@@ -2,6 +2,6 @@
 <div class="app-item-info">
     <p class="app-item-info__content"><span class="app-item-info__title">Model:</span> <%= car_name %></p>
     <p class="app-item-info__content"><span class="app-item-info__title">Klient:</span> <%= client_name %></p>
-    <p class="app-item-info__content"><span class="app-item-info__title">Data:</span> <%= date %></p>
+    <p class="app-item-info__content"><span class="app-item-info__title">Data:</span> <%= APP.Utils.formatDateMoment(date) %></p>
     <button type="button" class="btn edit">Edit</button>
 </div>
