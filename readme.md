@@ -1,7 +1,11 @@
 Cars Rental App
 ================
 
-MongoDB, Expressjs, Backbone and NodeJS
+### Technologies: 
+* MongoDB 
+* ExpressJS 
+* Backbone 
+* NodeJS
 
 ### Demonstration video
 
