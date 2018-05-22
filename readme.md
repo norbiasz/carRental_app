@@ -1,11 +1,14 @@
 Cars Rental App
 ================
 
+My simple application that helped me understand better NodeJS, MongoDB and Backbone
+
 ### Technologies: 
 * MongoDB 
 * ExpressJS 
-* Backbone 
 * NodeJS
+* Backbone 
+
 
 ### Demonstration video
 
