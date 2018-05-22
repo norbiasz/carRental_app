@@ -5,7 +5,7 @@ MongoDB, Expressjs, Backbone and NodeJS
 
 ### Demonstration video
 
-[![Cars Rental App](https://imgur.com/a/qN6bR7j)](https://player.vimeo.com/video/271297703 "Demonstration video cars rental application")
+[![Cars Rental App](https://raw.githubusercontent.com/norbiasz/carsRental_app/master/public/images/screen.JPG)](https://player.vimeo.com/video/271297703 "Demonstration video cars rental application")
 
 
 ### Install
