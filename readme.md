@@ -6,10 +6,16 @@ My simple application that helped me understand better NodeJS, MongoDB and Backb
 [link to the application](http://wnorbert.usermd.net/)
 
 ### Technologies: 
+
+#### Backend:
 * MongoDB 
 * ExpressJS 
 * NodeJS
+
+#### Frontend:
 * Backbone 
+* Grunt
+* SASS, RWD
 
 
 ### Demonstration video
