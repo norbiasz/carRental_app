@@ -31,6 +31,6 @@ My simple application that helped me understand better NodeJS, MongoDB and Backb
 * You can upload example collections to MongoDB from db directory with repository 
   (db name: carRental)
 * Start application `node server.js`
-* Navigate to `http://localhost:8000` to view the app
+* Navigate to `http://localhost:3000` to view the app
 
 
