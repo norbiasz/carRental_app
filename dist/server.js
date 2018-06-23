@@ -2,13 +2,14 @@ var express = require("express"),
     bodyParser = require("body-parser"), //gdy przychodzi żadanie dane są zamieniane na JSON
     async = require("async"), 
     mongo = require("mongodb"),
+	ObjectId = require('mongoose').Types.ObjectId,
     MongoClient = mongo.MongoClient,
     app = express(),
-    ObjectId = require('mongoose').Types.ObjectId,
-    dbUrl = "mongodb://localhost:27017/carRental";
-
+	dbUrl = "mongodb://mo1371_rental:Alternatywy9@mongo18.mydevil.net:27017/mo1371_rental";
     app.use(express.static(__dirname + "/public"));
     app.use(bodyParser.json());
+	
+	const PORT = process.env.PORT || 3000;
 
     var routes = {
 
@@ -447,6 +448,7 @@ var express = require("express"),
 
         var availableNames = ["cars", "brands", "categories", "rents", "clients"],
             colname = req.params.colname,
+			//colname = routes[req.route.path];
             name = req.query.name,
             regex = new RegExp(name, "ig"),
             fields = [
@@ -524,8 +526,7 @@ var express = require("express"),
         });
     
     });
-    
-    
-    app.listen("8000", function(){
-        console.log("serwer wystartował");
+   
+    app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
     });

@@ -84,6 +84,8 @@ module.exports = function(grunt) {
             dist: {
                 files: [
                     {expand: true, src: "server.js", dest: "dist/"},
+                    {expand: true, cwd: "public/icoomon/", src: "*", dest: "dist/public/icoomon/"},
+                    {expand: true, cwd: "public/icoomon/fonts/", src: "*", dest: "dist/public/icoomon/fonts/"},
                     {expand: true, cwd: "public/images/", src: "*", dest: "dist/public/images/"}
                 ]
             }
